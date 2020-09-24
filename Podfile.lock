@@ -1,0 +1,51 @@
+PODS:
+  - DiscoverCore (0.1.0):
+    - FeedKit (~> 9.1.2)
+    - NSString_stripHtml
+  - FeedKit (9.1.2)
+  - HTMLEntities (3.0.13)
+  - NSString_stripHtml (0.1.0)
+  - SDWebImage (5.9.1):
+    - SDWebImage/Core (= 5.9.1)
+  - SDWebImage/Core (5.9.1)
+  - SDWebImageSwiftUI (1.5.0):
+    - SDWebImage (~> 5.7)
+
+DEPENDENCIES:
+  - DiscoverCore (from `https://github.com/jkmassel/discover-core.git`, branch `main`)
+  - HTMLEntities (from `https://github.com/IBM-Swift/swift-html-entities.git`)
+  - SDWebImageSwiftUI (~> 1.5.0)
+
+SPEC REPOS:
+  trunk:
+    - FeedKit
+    - NSString_stripHtml
+    - SDWebImage
+    - SDWebImageSwiftUI
+
+EXTERNAL SOURCES:
+  DiscoverCore:
+    :branch: main
+    :git: https://github.com/jkmassel/discover-core.git
+  HTMLEntities:
+    :git: https://github.com/IBM-Swift/swift-html-entities.git
+
+CHECKOUT OPTIONS:
+  DiscoverCore:
+    :commit: fdc944854d4dec2dc20bceed5cc249cb4a713eeb
+    :git: https://github.com/jkmassel/discover-core.git
+  HTMLEntities:
+    :commit: 744c094976355aa96ca61b9b60ef0a38e979feb7
+    :git: https://github.com/IBM-Swift/swift-html-entities.git
+
+SPEC CHECKSUMS:
+  DiscoverCore: fbb43f63fdc2248a0b0344893f529a5ecefdb4d0
+  FeedKit: 71653273ab08e618cd6fd1301ca08fc02dca6a9e
+  HTMLEntities: 83738511518b3f29cf9644d0877505b8d3d1a849
+  NSString_stripHtml: ba10acfb1c0f7f687055f8e4300a8a78e142f1ea
+  SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
+  SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
+
+PODFILE CHECKSUM: 74526038869233f4a571fbf7a2d5411837aaec7e
+
+COCOAPODS: 1.9.3

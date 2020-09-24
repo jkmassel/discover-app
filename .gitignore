@@ -1,0 +1,28 @@
+# Xcode
+/Discover.xcworkspace/xcuserdata
+/Discover.xcodeproj/xcuserdata
+/Discover.xcodeproj/project.xcworkspace/xcuserdata
+
+# macOS
+.DS_Store
+
+# CocoaPods
+/Pods
+
+# Ruby
+/vendor
+
+# Fastlane
+/fastlane/report.xml
+/fastlane/screenshots
+/fastlane/Preview.html
+/fastlane/Appfile
+/fastlane/Deliverfile
+/fastlane/Snapfile
+
+# Build Products
+/Discover.app.dSYM.zip
+/Discover.ipa
+
+# Secrets
+api-key.json
