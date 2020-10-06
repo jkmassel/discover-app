@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2467E2E9252CC923007D4FC1 /* DiscoverScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467E2E8252CC923007D4FC1 /* DiscoverScreenshots.swift */; };
+		2467E2F4252CC9EE007D4FC1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467E2F3252CC9EE007D4FC1 /* SnapshotHelper.swift */; };
 		2478A109251C027600F9B7F5 /* ArticleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A108251C027600F9B7F5 /* ArticleProvider.swift */; };
 		2478A114251C07CF00F9B7F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A113251C07CF00F9B7F5 /* Extensions.swift */; };
 		2478A1B2251CFCFB00F9B7F5 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A1B1251CFCFB00F9B7F5 /* WebView.swift */; };
@@ -19,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2467E2EB252CC923007D4FC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24ADE923251BF7000026000A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24ADE92A251BF7000026000A;
+			remoteInfo = Discover;
+		};
 		2478A1E0251D0F7200F9B7F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24ADE923251BF7000026000A /* Project object */;
@@ -29,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2467E2E6252CC923007D4FC1 /* DiscoverScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiscoverScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2467E2E8252CC923007D4FC1 /* DiscoverScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScreenshots.swift; sourceTree = "<group>"; };
+		2467E2EA252CC923007D4FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2467E2F3252CC9EE007D4FC1 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		2478A108251C027600F9B7F5 /* ArticleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProvider.swift; sourceTree = "<group>"; };
 		2478A113251C07CF00F9B7F5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2478A1B1251CFCFB00F9B7F5 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -47,6 +60,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2467E2E3252CC923007D4FC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2478A1D8251D0F7200F9B7F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2467E2E7252CC923007D4FC1 /* DiscoverScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				2467E2E8252CC923007D4FC1 /* DiscoverScreenshots.swift */,
+				2467E2F3252CC9EE007D4FC1 /* SnapshotHelper.swift */,
+				2467E2EA252CC923007D4FC1 /* Info.plist */,
+			);
+			path = DiscoverScreenshots;
+			sourceTree = "<group>";
+		};
 		2478A1DC251D0F7200F9B7F5 /* DiscoverTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +109,7 @@
 			children = (
 				24ADE92D251BF7000026000A /* Discover */,
 				2478A1DC251D0F7200F9B7F5 /* DiscoverTests */,
+				2467E2E7252CC923007D4FC1 /* DiscoverScreenshots */,
 				24ADE92C251BF7000026000A /* Products */,
 				977751F2D5E3AAD93F025F25 /* Pods */,
 				DEF19BB19A30A282BFDA161F /* Frameworks */,
@@ -90,6 +121,7 @@
 			children = (
 				24ADE92B251BF7000026000A /* Discover.app */,
 				2478A1DB251D0F7200F9B7F5 /* DiscoverTests.xctest */,
+				2467E2E6252CC923007D4FC1 /* DiscoverScreenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +169,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2467E2E5252CC923007D4FC1 /* DiscoverScreenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2467E2EF252CC923007D4FC1 /* Build configuration list for PBXNativeTarget "DiscoverScreenshots" */;
+			buildPhases = (
+				2467E2E2252CC923007D4FC1 /* Sources */,
+				2467E2E3252CC923007D4FC1 /* Frameworks */,
+				2467E2E4252CC923007D4FC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2467E2EC252CC923007D4FC1 /* PBXTargetDependency */,
+			);
+			name = DiscoverScreenshots;
+			productName = DiscoverScreenshots;
+			productReference = 2467E2E6252CC923007D4FC1 /* DiscoverScreenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		2478A1DA251D0F7200F9B7F5 /* DiscoverTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2478A1E4251D0F7200F9B7F5 /* Build configuration list for PBXNativeTarget "DiscoverTests" */;
@@ -183,6 +233,10 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					2467E2E5252CC923007D4FC1 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 24ADE92A251BF7000026000A;
+					};
 					2478A1DA251D0F7200F9B7F5 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 24ADE92A251BF7000026000A;
@@ -207,11 +261,19 @@
 			targets = (
 				24ADE92A251BF7000026000A /* Discover */,
 				2478A1DA251D0F7200F9B7F5 /* DiscoverTests */,
+				2467E2E5252CC923007D4FC1 /* DiscoverScreenshots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2467E2E4252CC923007D4FC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2478A1D9251D0F7200F9B7F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +335,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2467E2E2252CC923007D4FC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2467E2E9252CC923007D4FC1 /* DiscoverScreenshots.swift in Sources */,
+				2467E2F4252CC9EE007D4FC1 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2478A1D7251D0F7200F9B7F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +367,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2467E2EC252CC923007D4FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24ADE92A251BF7000026000A /* Discover */;
+			targetProxy = 2467E2EB252CC923007D4FC1 /* PBXContainerItemProxy */;
+		};
 		2478A1E1251D0F7200F9B7F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24ADE92A251BF7000026000A /* Discover */;
@@ -304,6 +380,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2467E2ED252CC923007D4FC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LD66C4Z2C;
+				INFOPLIST_FILE = DiscoverScreenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.automattic.DiscoverScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Discover;
+			};
+			name = Debug;
+		};
+		2467E2EE252CC923007D4FC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LD66C4Z2C;
+				INFOPLIST_FILE = DiscoverScreenshots/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.automattic.DiscoverScreenshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Discover;
+			};
+			name = Release;
+		};
 		2478A1E2251D0F7200F9B7F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,6 +623,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2467E2EF252CC923007D4FC1 /* Build configuration list for PBXNativeTarget "DiscoverScreenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2467E2ED252CC923007D4FC1 /* Debug */,
+				2467E2EE252CC923007D4FC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2478A1E4251D0F7200F9B7F5 /* Build configuration list for PBXNativeTarget "DiscoverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -14,3 +14,26 @@ jobs:
       # Check out the repository
       - uses: actions/checkout@v2
 
+      # Install everything in the Gemfile
+      - name: Install Ruby Dependencies
+        run: bundle install
+
+      # Select Xcode 12
+      - name: Select Xcode 12
+        run: sudo xcode-select -s /Applications/Xcode_12.app
+
+      # Install Pods
+      - name: Install Pods
+        run: bundle exec pod install
+
+      # Generate Screenshots
+      - name: Screenshots
+        timeout-minutes: 10
+        run: bundle exec fastlane screenshots
+
+      # Store Screenshots for later
+      - uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: fastlane/screenshots
+

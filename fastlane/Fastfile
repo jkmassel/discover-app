@@ -1,2 +1,17 @@
 default_platform(:ios)
 
+lane :screenshots do
+
+  setup_ci
+
+  capture_screenshots(
+      devices: [
+        "iPhone 8 Plus",
+        "iPhone 11 Pro Max"
+      ],
+      scheme: "DiscoverScreenshots",
+      override_status_bar: true,
+      languages: ["en-US"],
+      erase_simulator: true,
+  )
+end
