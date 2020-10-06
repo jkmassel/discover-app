@@ -15,3 +15,43 @@ lane :screenshots do
       erase_simulator: true,
   )
 end
+
+# Renews the release signing certificates. Only run after deleting everything in the signing repository
+lane :renew_release_signing_certificates do
+    sync_code_signing(
+      git_url: "https://github.com/jkmassel/discover-code-signing.git",
+      type: "appstore",
+      app_identifier: "com.automattic.discover",
+      team_id: "6LD66C4Z2C",
+      api_key_path: 'api-key.json',
+    )
+end
+
+lane :build_and_upload_release do
+
+  setup_ci
+
+  sync_code_signing(
+    git_url: "https://github.com/jkmassel/discover-code-signing.git",
+    type: "appstore",
+    app_identifier: "com.automattic.discover",
+    team_id: "6LD66C4Z2C",
+    api_key_path: 'api-key.json',
+    git_basic_authorization: Base64.strict_encode64( ENV["GITHUB_ACTOR"] + ":" + ENV["GITHUB_TOKEN"] ),
+    readonly: true,
+  )
+
+  build_app(
+    workspace: "Discover.xcworkspace",
+    configuration: "Release",
+    scheme: "Discover",
+    export_team_id: "6LD66C4Z2C",
+    export_method: "app-store",
+  )
+
+  upload_to_testflight(
+    api_key_path: 'api-key.json',
+    skip_waiting_for_build_processing: true,
+  )
+
+end

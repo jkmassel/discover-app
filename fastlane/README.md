@@ -20,6 +20,16 @@ or alternatively using `brew install fastlane`
 fastlane screenshots
 ```
 
+### renew_release_signing_certificates
+```
+fastlane renew_release_signing_certificates
+```
+
+### build_and_upload_release
+```
+fastlane build_and_upload_release
+```
+
 
 ----
 

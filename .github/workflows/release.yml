@@ -26,6 +26,12 @@ jobs:
       - name: Install Pods
         run: bundle exec pod install
 
+      # Ensure credentials are available on the CI machine
+      - name: Set up App Store Connect API Credentials
+        run: echo $APP_STORE_CONNECT_CREDENTIALS > api-key.json
+        env:
+          APP_STORE_CONNECT_CREDENTIALS: ${{ secrets.APP_STORE_CONNECT_CREDENTIALS }}
+
       # Generate Screenshots
       - name: Screenshots
         timeout-minutes: 10
@@ -36,4 +42,45 @@ jobs:
         with:
           name: screenshots
           path: fastlane/screenshots
+
+      # Build the App + Upload it to App Store Connect
+      - name: Build and Upload
+        run: bundle exec fastlane build_and_upload_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+
+      # Create a GitHub Release from this tag
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: true
+          prerelease: false
+
+      # Upload the IPA File
+      - name: Upload App Binary
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: "Discover.ipa"
+          asset_name: "Discover.ipa"
+          asset_content_type: application/zip
+
+      # Upload the dSYM File
+      - name: Upload App Symbols
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: "Discover.app.dSYM.zip"
+          asset_name: "Discover.app.dSYM.zip"
+          asset_content_type: application/zip
 
