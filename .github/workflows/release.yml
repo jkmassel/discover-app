@@ -1,0 +1,16 @@
+name: Release
+
+# Run this workflow whenever a new tag is created
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    # Use a macOS machine to run this job
+    runs-on: macos-latest
+    steps:
+      # Check out the repository
+      - uses: actions/checkout@v2
+
