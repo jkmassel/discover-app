@@ -14,7 +14,7 @@ struct ArticleView: View {
                 .transition(.fade)
                 .scaledToFill()
             Text(article.title)
-//                .font(Style.articleTitle)
+                .font(Style.articleTitle)
                 .lineLimit(4)
                 .padding()
         }

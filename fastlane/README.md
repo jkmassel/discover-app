@@ -30,6 +30,11 @@ fastlane renew_release_signing_certificates
 fastlane build_and_upload_release
 ```
 
+### upload_metadata_and_screenshots
+```
+fastlane upload_metadata_and_screenshots
+```
+
 
 ----
 

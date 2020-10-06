@@ -84,3 +84,7 @@ jobs:
           asset_name: "Discover.app.dSYM.zip"
           asset_content_type: application/zip
 
+                # Upload Screenshots + Metadata
+      - name: Upload Screenshots + Metadata
+        run: bundle exec fastlane upload_metadata_and_screenshots
+

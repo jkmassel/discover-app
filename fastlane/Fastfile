@@ -55,3 +55,15 @@ lane :build_and_upload_release do
   )
 
 end
+
+
+lane :upload_metadata_and_screenshots do
+  deliver(
+    app_identifier: "com.automattic.discover",
+    force: is_ci, # Skip HTML report verification in CI
+    skip_binary_upload: true,
+    overwrite_screenshots: true,
+    precheck_include_in_app_purchases: false, # Disabled because it doesn't work with the API
+    api_key_path: 'api-key.json',
+  )
+end

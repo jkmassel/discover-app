@@ -4,7 +4,7 @@ import SwiftUI
 struct DiscoverApp: App {
 
     init() {
-        // setupStyles()
+        setupStyles()
     }
 
     var body: some Scene {
